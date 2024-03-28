@@ -37,7 +37,11 @@ module controller (
       aluop,
       alucontrol
   );
-  assign pcsrc = branch & zero;
+
+  always_comb begin
+    if (op == 6'b000100) pcsrc = branch & ~zero;
+    else pcsrc = branch & zero;
+  end
 endmodule
 
 `endif
