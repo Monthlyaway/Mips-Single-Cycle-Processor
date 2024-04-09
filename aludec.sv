@@ -9,6 +9,7 @@ module aludec (
       3'b000: alucontrol = 3'b000;  // add (for lw/sw/addi)
       3'b001: alucontrol = 3'b001;  // sub (for beq)
       3'b010: alucontrol = 3'b110;  // or (ori)
+      3'b011: alucontrol = 3'b010;  // and (andi)
       default:
       case (funct)
         // R-type instructions

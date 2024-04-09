@@ -25,6 +25,7 @@ module maindec (
       6'b001000: controls = 10'b1010000000;  // ADDI
       6'b000010: controls = 10'b0000001000;  // J
       6'b001101: controls = 10'b1010000010;  // ORI
+      6'b001100: controls = 10'b1010000011;  // ANDI
       default:   controls = 10'bxxxxxxxxxx;  // illegal op
     endcase
   end
