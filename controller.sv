@@ -18,7 +18,7 @@ module controller (
     output logic [2:0] alucontrol,
     input clk
 );
-  logic [1:0] aluop;
+  logic [2:0] aluop;
   logic branch;
   maindec md (
       op,
@@ -39,7 +39,7 @@ module controller (
   );
 
   always_comb begin
-    if (op == 6'b000100) pcsrc = branch & ~zero;
+    if (op == 6'b000100) pcsrc = branch & ~zero;  // for bne
     else pcsrc = branch & zero;
   end
 endmodule

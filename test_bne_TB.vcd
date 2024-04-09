@@ -1,5 +1,5 @@
 $date
-	Sat Mar 30 20:47:04 2024
+	Tue Apr 09 21:05:21 2024
 $end
 $version
 	Icarus Verilog
@@ -62,12 +62,12 @@ $var wire 1 8 memtoreg $end
 $var wire 1 9 jump $end
 $var wire 1 ? branch $end
 $var wire 1 : alusrc $end
-$var wire 2 @ aluop [1:0] $end
+$var wire 3 @ aluop [2:0] $end
 $var wire 3 A alucontrol [2:0] $end
 $var reg 1 6 pcsrc $end
 $scope module ad $end
 $var wire 6 B funct [5:0] $end
-$var wire 2 C aluop [1:0] $end
+$var wire 3 C aluop [2:0] $end
 $var reg 3 D alucontrol [2:0] $end
 $scope begin aludecblock $end
 $upscope $end
@@ -82,8 +82,8 @@ $var wire 1 8 memtoreg $end
 $var wire 1 9 jump $end
 $var wire 1 ? branch $end
 $var wire 1 : alusrc $end
-$var wire 2 F aluop [1:0] $end
-$var reg 9 G controls [8:0] $end
+$var wire 3 F aluop [2:0] $end
+$var reg 10 G controls [9:0] $end
 $upscope $end
 $upscope $end
 $scope module dp $end
@@ -243,7 +243,7 @@ b11100 \
 b111 [
 b0 Z
 b111 Y
-b10 X
+b0 X
 b111 W
 b0 V
 b100000 U
@@ -259,19 +259,19 @@ bx L
 b10 K
 bx J
 b100000000000100000000000000111 I
-b10 H
-b101000000 G
+b0 H
+b1010000000 G
 b0 F
 b1000 E
-b10 D
+b0 D
 b0 C
 b111 B
-b10 A
+b0 A
 b0 @
 0?
 b1000 >
 b111 =
-b10 <
+b0 <
 b111 ;
 1:
 09
@@ -381,11 +381,11 @@ b100 n
 #30
 0$
 #35
-b110 <
-b110 A
-b110 D
-b110 H
-b110 X
+b1 <
+b1 A
+b1 D
+b1 H
+b1 X
 b11111111111111111111111111111011 Q
 b11111111111111111111111111111011 q
 b11111111111111111111111111111011 u
@@ -402,7 +402,7 @@ b11111111111111111111111111111011 ;
 b11111111111111111111111111111011 W
 b11111111111111111111111111111011 [
 b11111111111111111111111111111011 o
-b100001 G
+b1000001 G
 b111 N
 b111 Z
 b111 x
@@ -460,11 +460,11 @@ b1000 n
 b1010100 M
 b1010100 Y
 b1010100 }
-b10 <
-b10 A
-b10 D
-b10 H
-b10 X
+b0 <
+b0 A
+b0 D
+b0 H
+b0 X
 b1010100 Q
 b1010100 q
 b1010100 u
@@ -481,7 +481,7 @@ b1010100 ;
 b1010100 W
 b1010100 [
 b1010100 o
-b1010000 G
+b10100000 G
 b0 N
 b0 Z
 b0 x
